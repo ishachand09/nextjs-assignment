@@ -24,3 +24,32 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.my-container{
+  padding-inline: 1rem; /* px-4 */
+
+  @media (min-width: 640px) {
+      /* sm */
+      padding-inline: 1.5rem; /* px-6 */
+  }
+
+  @media (min-width: 1024px) {
+      /* lg */
+      padding-inline: 4rem; /* px-16 */
+  }
+
+  @media (min-width: 1280px) {
+      /* xl */
+      padding-inline: 5rem; /* px-20 */
+  }
+
+  @media (min-width: 1536px) {
+      /* 2xl */
+      padding-inline: 6rem; /* px-24 */
+  }
+
+  @media (min-aspect-ratio: 2/1) {
+      padding-inline: 7rem; /* px-28 */
+  }
+
+}
