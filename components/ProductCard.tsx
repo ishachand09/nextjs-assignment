@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface ProductCardProps {
-    id: string;
+    id: string | number;
     title: string;
     price: number;
     image: string;

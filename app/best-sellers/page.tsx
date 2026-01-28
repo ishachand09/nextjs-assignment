@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 interface Product {
-    id: string;
+    id: string | number;
     title: string;
     price: number;
     description: string;
