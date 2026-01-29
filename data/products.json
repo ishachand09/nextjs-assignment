@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1769677848628",
+    "title": "White Pullover",
+    "description": "Regular fit sweatshirt. High neck with front zip fastening. Long sleeves. Ribbed trims.",
+    "price": 50,
+    "category": "Clothing",
+    "imageUrl": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png",
+    "createdAt": "2026-01-29T09:10:48.628Z"
+  },
+  {
+    "id": "1769682746948",
+    "title": "Diamond Ring",
+    "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her",
+    "price": 40,
+    "category": "Rings",
+    "imageUrl": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png",
+    "createdAt": "2026-01-29T10:32:26.948Z"
+  },
+  {
+    "id": "1769682775352",
+    "title": "test",
+    "description": "test",
+    "price": 2,
+    "category": "test",
+    "imageUrl": "https://test.com",
+    "createdAt": "2026-01-29T10:32:55.352Z"
+  }
+]
