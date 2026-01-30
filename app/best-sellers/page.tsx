@@ -1,19 +1,7 @@
-import ProductCard from '@/components/ProductCard';
+import { Product } from '@/lib/products';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-
-interface Product {
-    id: string | number;
-    title: string;
-    price: number;
-    description: string;
-    category: string;
-    image: string;
-    rating: {
-        rate: number;
-        count: number;
-    };
-}
+import ProductList from './ProductList';
 
 async function getProducts(): Promise<Product[]> {
     const res = await fetch('https://fakestoreapi.com/products', {
@@ -43,18 +31,7 @@ export default async function Bestseller() {
                 </div>
 
                 {/* Products Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-8 gap-y-14">
-                    {products.map((product) => (
-                        <ProductCard
-                            key={product.id}
-                            id={product.id}
-                            title={product.title}
-                            price={product.price}
-                            image={product.image}
-                            rating={product.rating}
-                        />
-                    ))}
-                </div>
+                <ProductList products={products} />
 
             </section>
             <Footer />

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -10,14 +12,15 @@ interface ProductCardProps {
         rate: number;
         count: number;
     };
+    onAddToCart?: () => void;
 }
 
-export default function ProductCard({ id, title, price, image, rating }: ProductCardProps) {
+export default function ProductCard({ id, title, price, image, rating, onAddToCart }: ProductCardProps) {
     return (
-        <Link href={`/product/${id}`} className="group">
-            <div className="bg-white border border-stone-200 hover:shadow-lg transition-shadow duration-300 text-stone-700">
+        <div className="group relative bg-white border border-stone-200 hover:shadow-lg transition-shadow duration-300 text-stone-700 flex flex-col">
+            <Link href={`/product/${id}`} className="flex-1">
                 {/* Product Image */}
-                <div className="relative h-64 flex items-center justify-center p-6">
+                <div className="relative h-64 flex items-center justify-center p-6 bg-white">
                     <Image
                         src={image}
                         alt={title}
@@ -59,7 +62,21 @@ export default function ProductCard({ id, title, price, image, rating }: Product
                         <span className="text-base">${price.toFixed(2)}</span>
                     </div>
                 </div>
-            </div>
-        </Link>
+            </Link>
+
+            {onAddToCart && (
+                <div className="p-4 pt-0">
+                    <button
+                        onClick={(e) => {
+                            e.preventDefault();
+                            onAddToCart();
+                        }}
+                        className="w-full bg-stone-800 text-white py-2 rounded hover:bg-stone-700 transition-colors"
+                    >
+                        Add to Cart
+                    </button>
+                </div>
+            )}
+        </div>
     );
 }
